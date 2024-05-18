@@ -1,0 +1,79 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$customColor: #1976d2;
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-form {
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form-title {
+    text-align: center;
+    font-size: 24px;
+    color: $customColor;
+    margin-bottom: 20px;
+}
+
+.login-form-error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.login-input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.login-button {
+    width: 100%;
+    background-color: $customColor;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($customColor, 10%);
+    }
+}
+
+.login-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-input input {
+    border: none;
+    border-bottom: 2px solid $customColor;
+    outline: none;
+    padding: 8px 0;
+    transition: border-bottom-color 0.3s ease;
+    flex-grow: 1;
+
+    &:focus {
+        border-bottom-color: darken($customColor, 20%);
+    }
+}
+
+.login-input label {
+    color: $customColor;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
